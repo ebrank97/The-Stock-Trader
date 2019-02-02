@@ -1,3 +1,24 @@
 <template>
-    <h1>The stock - Stocks Component</h1>
+    <div>
+        <app-stock v-for="(stock, i) in stocks" :key="i"></app-stock>
+    </div>
 </template>
+
+<script>
+import Stock from './Stock.vue';
+export default {
+    data() {
+        return {
+            stocks: [
+                { id: 1, name: 'BMW', price: 110 },
+                { id: 2, name: 'Google', price: 180 },
+                { id: 3, name: 'Apple', price: 200 },
+                { id: 4, name: 'Twitter', price: 8 }
+            ]
+        }
+    },
+    components: {
+        appStock: Stock
+    }
+}
+</script>
