@@ -18,7 +18,7 @@
                 </div>
                 <div class="pull-right">
                     <button 
-                        class="btn btn-danger"
+                        class="btn btn-primary"
                         @click="sellStock"
                         :disabled="quantity <= 0 || !(Number.isInteger(quantity))"
                         >Sell</button>
